@@ -38,6 +38,7 @@ stages:
         tags: |
           $(tag)
     - publish: '$(Build.SourcesDirectory)/manifests'
+      displayName: 'Publish manifest for the next stage'
       artifact: manifests
 
 - stage: 'Deploy'
